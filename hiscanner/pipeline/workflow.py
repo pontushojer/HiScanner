@@ -46,11 +46,7 @@ class SnakemakeWorkflow:
                     "This might indicate a corrupted or incomplete installation.\n"
                     "Try reinstalling HiScanner: pip install --no-cache-dir --force-reinstall hiscanner"
                 )
-                    
-            # Make executable if needed
-            if not tool_path.suffix == '.pl':
-                tool_path.chmod(0o755)
-                    
+   
             return tool_path
                 
         except Exception as e:

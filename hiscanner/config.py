@@ -45,10 +45,6 @@ class Config:
             if not tool_path.exists():
                 raise ConfigError(f"Tool not found: {tool_path}")
                 
-            # Make executable if needed
-            if not tool_path.suffix == '.pl':
-                tool_path.chmod(0o755)
-                
             return tool_path
             
         except Exception as e:
